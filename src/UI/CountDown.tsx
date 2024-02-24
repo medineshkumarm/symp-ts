@@ -10,7 +10,8 @@ const HOUR = MINUTE * 60;
 const DAY = HOUR * 24;
 
 const CountDown = () => {
-  const intervalRef = useRef(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
 
   const [remaining, setRemaining] = useState({
     days: 0,
@@ -56,8 +57,11 @@ const CountDown = () => {
     </div>
   );
 };
-
-const CountdownItem = ({ num, text }) => {
+interface CountdownItemProps {
+  num: number;
+  text: string;
+}
+const CountdownItem: React.FC<CountdownItemProps> = ({ num, text }) => {
   return (
     <div className="font-mono w-1/4 h-24 md:h-24 flex flex-col gap-1 md:gap-2 items-center justify-center border-[.2px] border-slate-200">
       <div className="w-full text-center relative overflow-hidden">

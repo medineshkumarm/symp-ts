@@ -200,7 +200,7 @@ const Footer = () => {
 
 export default Footer;
 
-const LinkGroup = ({ children, header }) => {
+const LinkGroup: React.FC<{ children: React.ReactNode; header: string }>= ({ children, header }) => {
   return (
     <>
       <div className="w-full px-4 sm:w-1/2 lg:w-2/12">
@@ -215,7 +215,7 @@ const LinkGroup = ({ children, header }) => {
   );
 };
 
-const NavLink = ({ link, label }) => {
+const NavLink: React.FC<{ link: string; label: string }> = ({ link, label }) => {
   return (
     <li>
       <a
