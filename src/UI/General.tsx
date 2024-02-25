@@ -31,13 +31,11 @@ const General: React.FC = () => {
                     <span className="font-semibold text-zinc-900">
                       Theme :{" "}
                     </span>
-                    Artificial Intelligence and Data
+                    Computer Science and Enginnering
                   </p>
                   <p>
-                    <span className="font-semibold text-zinc-900">
-                      Science Venue :
-                    </span>{" "}
-                    Department of AI & DS, Panimalar Engineering
+                    <span className="font-semibold text-zinc-900">Venue :</span>{" "}
+                    Department of CSE, Panimalar Engineering
                   </p>
                   <p>
                     <span className="font-semibold text-zinc-900">
