@@ -1,8 +1,7 @@
 "use client";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+// import { motion, useAnimation } from "framer-motion";
 export function BG2() {
-  const controls = useAnimation();
+  // const controls = useAnimation();
 
   // useEffect(() => {
   //   const handleScroll = () => {
