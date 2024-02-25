@@ -1,15 +1,17 @@
+import React from "react";
 
-export default function General() {
+const General: React.FC = () => {
   return (
     <main className="h-[40rem] flex justify-center items-center">
       <div className="bg-white shadow-2xl rounded-xl p-6">
         <h1 className="text-4xl font-semibold mb-4">General Info</h1>
         <div className="border-t pt-4">
           <div className="flex gap-10">
-            <image
-              href="./logo.jpg"
+            <img
+              src="./logo.jpg"
               height={100}
               width={100}
+              alt="Logo"
               className="p-[200px] bg-black"
             />
             <div>
@@ -41,7 +43,7 @@ export default function General() {
                     <span className="font-semibold text-zinc-900">
                       College Timing :
                     </span>{" "}
-                    All participants should report at venue by 8:30am.
+                    All participants should report at the venue by 8:30 am.
                   </p>
                   <p>
                     <span className="font-semibold text-zinc-900">
@@ -63,4 +65,6 @@ export default function General() {
       </div>
     </main>
   );
-}
+};
+
+export default General;

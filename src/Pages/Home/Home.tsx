@@ -1,7 +1,8 @@
 import Footer from "../../UI/Footer";
-import { BG2 } from "../../BG2";
 import Navbar from "../../UI/NavBar";
 import General from "@/UI/General";
+import { Carousels } from "@/UI/Carousels";
+import BG2 from "@/BG2";
 function Home() {
   return (
     <>
@@ -9,6 +10,7 @@ function Home() {
       <BG2 />
       <General />
       {/* <Card /> */}
+      <Carousels/>
       <Footer />
     </>
   );
