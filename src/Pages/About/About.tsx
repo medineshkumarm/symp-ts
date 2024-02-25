@@ -1,11 +1,11 @@
-import Navbar from "../../UI/NavBar";
+import Navbar from "@/UI/NavBar"
+
 function About() {
   return (
     <>
-      <Navbar />
-
+    <Navbar/>
     </>
-  );
+  )
 }
 
-export default About;
+export default About
