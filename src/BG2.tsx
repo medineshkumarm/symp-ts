@@ -1,74 +1,34 @@
 "use client";
-import vid from "/video/intro.mp4";
+import vid from "/video/introd.mp4";
 import CountDown from "./UI/CountDown";
-
+import Navbar from "./UI/NavBar";
 export default function BG2() {
-  // You can remove the unused imports
-
   return (
-    <div className="hero-section">
-      <video className="video-background" autoPlay muted loop>
+    <div className="relative h-screen">
+      {/* Video Background */}
+      <video
+        className="w-full h-5/6 object-cover absolute top-0 left-0"
+        autoPlay
+        muted
+        loop
+      >
         <source src={vid} type="video/mp4" />
       </video>
-      <div className="hero-content">
-        <CountDown />
-        {/* Add any other UI components/content as needed */}
+
+      {/* Overlay Content */}
+      <div className="absolute p-3 inset-0 flex flex-col items-center text-white">
+        <div className="mt-auto my-16  w-full  ">
+          {/* Move Countdown to the bottom */}
+          <CountDown />
+        </div>
+      </div>
+
+      {/* Navbar */}
+      <div className="fixed top-0 w-full z-50">
+        <Navbar />
       </div>
     </div>
   );
 }
 
 
-// "use client";
-// // import { useState } from "react";
-// // import { useNavigate } from "react-router-dom";
-// // import { motion, useAnimation } from "framer-motion";
-// import vid from "/video/intro.mp4";
-// import CountDown from "./UI/CountDown";
-// export function BG2() {
-//   // const controls = useAnimation();
-
-//   // useEffect(() => {
-//   //   const handleScroll = () => {
-//   //     const scrollY = window.scrollY;
-//   //     if (scrollY > 100) {
-//   //       controls.start({
-//   //         opacity: 1,
-//   //         scale: 1.1,
-//   //         transition: { duration: 0.3 },
-//   //       });
-//   //     } else {
-//   //       controls.start({ opacity: 1, scale: 1, transition: { duration: 0.3 } });
-//   //     }
-//   //   };
-
-//   //   window.addEventListener("scroll", handleScroll);
-//   //   return () => window.removeEventListener("scroll", handleScroll);
-//   // }, [controls]);
-//   // const [showEvents, setShowEvents] = useState(false);
-//   // const navigate = useNavigate(); // Initialize navigate hook
-
-//   // const toggleEvents = () => {
-//   //   setShowEvents(!showEvents);
-//   //   if (!showEvents) {
-//   //     navigate("/events"); // Redirect to events page
-//   //   }
-//   // };
-
-//   return (
-//     <div className="hero-section">
-//       <video className="video-background" autoPlay muted loop>
-//         <source src={vid} type="video/mp4" />
-//       </video>
-//       {/* <p>Your browser does not support the video tag.</p> */}
-//       <div className="hero-content">
-//         <CountDown/>
-//         {/* <h1>Welcome to Our Website</h1> */}
-//         {/* <p>{new Date().toLocaleDateString()}</p> */}
-//       </div>
-//       {/* <button className="toggle-button" onClick={toggleEvents}> */}
-//         {/* {showEvents ? "Hide Events" : "Show Events"} */}
-//       {/* </button> */}
-//     </div>
-//   );
-// }

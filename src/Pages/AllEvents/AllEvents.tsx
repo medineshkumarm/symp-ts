@@ -4,8 +4,6 @@ function AllEvents() {
   return (
     <>
       <Navbar />
-      {/* <StickyScrollRevealDemo />
-      <StickyScrollRevealDemo /> */}
       <SymposiumEvents />
     </>
   );
@@ -22,7 +20,12 @@ interface EventCardProps {
   rounds: { name: string; details: string[] }[];
 }
 
-const EventCard: React.FC<EventCardProps> = ({ eventName, eventType, details, rounds }) => {
+const EventCard: React.FC<EventCardProps> = ({
+  eventName,
+  eventType,
+  details,
+  rounds,
+}) => {
   return (
     <div className="max-w-md mx-auto mt-8">
       <div className="bg-white p-6 rounded-md shadow-md">
@@ -66,7 +69,6 @@ const EventCard: React.FC<EventCardProps> = ({ eventName, eventType, details, ro
     </div>
   );
 };
-
 
 const SymposiumEvents = () => {
   const events = [

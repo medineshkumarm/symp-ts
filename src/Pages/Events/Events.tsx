@@ -1,7 +1,10 @@
 import React from "react";
 import Navbar from "../../UI/NavBar";
 import "./events.css";
-
+import img1 from "/img/1.png";
+import img2 from "/img/2.png";
+import img3 from "/img/3.png";
+import img4 from "/img/4.png";
 interface SingleCardProps {
   image: string;
   Button: string;
@@ -23,7 +26,7 @@ const SingleCard: React.FC<SingleCardProps> = ({
       <h3 className="text-2xl font-semibold mb-4 p-8 text-center text-white bg-primary dark:bg-dark-2">
         {CardTitle}
       </h3>
-      <img src={image} alt="" className="w-full " />
+      <img src={image} alt="" className="w-3/4 mx-auto" />
       <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9">
         <p className="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
           {CardDescription}
@@ -38,13 +41,8 @@ const SingleCard: React.FC<SingleCardProps> = ({
           </a>
         )}
 
-        {/* Added "Know More" button */}
-        {/* <a
-          href={btnHref || "#"}
-          className="inline-block mt-4 text-sm text-primary hover:underline dark:text-primary-dark transition"
-        >
-          Know More
-        </a> */}
+       
+
       </div>
     </div>
   );
@@ -53,20 +51,20 @@ const SingleCard: React.FC<SingleCardProps> = ({
 const TechnicalEvents: React.FC = () => {
   const technicalEventsData = [
     {
-      image: "https://i.ibb.co/r2zns1m/image-01.jpg",
-      CardTitle: "TECHNICAL EVENTS 1 - BOTATHON",
+      image: img3,
+      CardTitle: "BOT-A-THON",
       CardDescription:
         "Unleash the power of automation in BOTATHON! Join forces, submit your scenarios, and witness bots come to life at IDEA SUMMIT and BOT EXPO.",
-      btnHref: "/allevents",
-      Button: "Register",
+      btnHref: "/bot",
+      Button: "Know more",
     },
     {
-      image: "https://i.ibb.co/0nbbWM9/image-02-1.jpg",
-      CardTitle: "TECHNICAL EVENTS 2 - RED BREAK GREEN",
+      image: img4,
+      CardTitle: "RED BREAK GREEN",
       CardDescription:
         "Break the code, paint the town red! RED BREAK GREEN challenges your coding skills, creativity, and teamwork. Which team will shine bright with red and green ribbons?",
-      btnHref: "/allevents",
-      Button: "Register",
+      btnHref: "/rpg",
+      Button: "Know more",
     },
     // Add more technical events as needed
   ];
@@ -87,20 +85,20 @@ const TechnicalEvents: React.FC = () => {
 const NonTechnicalEvents: React.FC = () => {
   const nonTechnicalEventsData = [
     {
-      image: "https://i.ibb.co/r2zns1m/image-01.jpg",
-      CardTitle: "E-SPORT",
+      image: img1,
+      CardTitle: "BGMI-CLASH",
       CardDescription:
         "Gear up for E-SPORT! Engage in fierce battles during DUO CLASSIC and experience the ultimate TDM clash in the gaming arena. Only the best will conquer!",
-      btnHref: "/allevents",
-      Button: "Register",
+      btnHref: "/bgmi",
+      Button: "Know more",
     },
     {
-      image: "https://i.ibb.co/0nbbWM9/image-02-1.jpg",
+      image: img2,
       CardTitle: " IPL AUCTION",
       CardDescription:
         "Experience the thrill of IPL AUCTION! From CLASSIC QUIZ to strategic player selections with a budget of 100 crore, it's a cricketing journey where only the champions prevail.",
-      btnHref: "/allevents",
-      Button: "Register",
+      btnHref: "/ipl",
+      Button: "Know more",
     },
     // Add more non-technical events as needed
   ];

@@ -9,14 +9,19 @@ import {
 
 export function Carousels() {
   return (
-    <Carousel className="w-full max-w-xl mx-auto  ">
+    <Carousel className="w-full max-w-md mx-auto">
       <CarouselContent className="-ml-1">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+        {Array.from({ length: 4 }).map((_, index) => (
+          <CarouselItem key={index} className="pl-1">
             <div className="p-1">
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-2xl font-semibold">{index + 1}</span>
+                <CardContent className="flex items-center justify-center p-2">
+                  {/* Adjust the image size as needed */}
+                  <img
+                    src="/img/1.png"
+                    alt=""
+                    className="w-full h-auto object-cover"
+                  />
                 </CardContent>
               </Card>
             </div>

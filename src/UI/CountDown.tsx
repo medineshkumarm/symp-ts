@@ -12,7 +12,6 @@ const DAY = HOUR * 24;
 const CountDown = () => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-
   const [remaining, setRemaining] = useState({
     days: 0,
     hours: 0,
@@ -47,13 +46,11 @@ const CountDown = () => {
   };
 
   return (
-    <div className=" bg-gradient-to-br from-slate-900 to-black">
-      <div className="w-full max-w-5xl mx-auto flex items-center bg-black">
-        <CountdownItem num={remaining.days} text="days" />
-        <CountdownItem num={remaining.hours} text="hours" />
-        <CountdownItem num={remaining.minutes} text="minutes" />
-        <CountdownItem num={remaining.seconds} text="seconds" />
-      </div>
+    <div className="w-full max-w-4xl mx-auto flex items-center bg-white text-black">
+      <CountdownItem num={remaining.days} text="days" />
+      <CountdownItem num={remaining.hours} text="hours" />
+      <CountdownItem num={remaining.minutes} text="minutes" />
+      <CountdownItem num={remaining.seconds} text="seconds" />
     </div>
   );
 };
@@ -63,7 +60,7 @@ interface CountdownItemProps {
 }
 const CountdownItem: React.FC<CountdownItemProps> = ({ num, text }) => {
   return (
-    <div className="font-mono w-1/4 h-24 md:h-24 flex flex-col gap-1 md:gap-2 items-center justify-center border-[.2px] border-slate-200">
+    <div className="font-mono w-1/4 h-20 md:h-20 flex flex-col gap-1 md:gap-2 items-center justify-center border-[.2px]">
       <div className="w-full text-center relative overflow-hidden">
         <AnimatePresence mode="popLayout">
           <motion.span
@@ -72,15 +69,13 @@ const CountdownItem: React.FC<CountdownItemProps> = ({ num, text }) => {
             animate={{ y: "0%" }}
             exit={{ y: "-100%" }}
             transition={{ ease: "backIn", duration: 0.75 }}
-            className="block text-2xl md:text-2xl lg:text-4xl xl:text-5xl text-white font-medium"
+            className="block text-xl md:text-2xl lg:text-xl xl:text-2xl text-black font-medium"
           >
             {num}
           </motion.span>
         </AnimatePresence>
       </div>
-      <span className="text-xs md:text-sm lg:text-base font-light text-slate-200">
-        {text}
-      </span>
+      <span className="text-xs md:text-sm lg:text-base font-light">{text}</span>
     </div>
   );
 };
